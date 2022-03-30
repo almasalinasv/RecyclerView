@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivVideoThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/translucent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:id="@+id/tvVideoDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/translucent"
+        android:textSize="15dp"
+        android:text="00:00:00"
+        app:layout_constraintRight_toRightOf="@id/ivVideoThumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/ivVideoThumbnail"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:id="@+id/ivAvatar"
+        android:src="@color/translucent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivVideoThumbnail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvVideoTitle"
+        android:layout_margin="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tvVideoTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Example of a video title"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ivVideoThumbnail"
+        app:layout_constraintLeft_toRightOf="@id/ivAvatar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvChannelName"
+        android:layout_marginHorizontal="20dp"
+        android:maxLines="2"
+        />
+
+    <TextView
+        android:id="@+id/tvChannelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="YouTubeHelp"
+        app:layout_constraintLeft_toLeftOf="@id/tvVideoTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvVideoTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvVideoViews"
+        android:layout_marginHorizontal="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvVideoViews"
+        android:text="3.9k views"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/tvChannelName"
+        app:layout_constraintRight_toLeftOf="@+id/tvDatePosted"
+        app:layout_constraintTop_toBottomOf="@id/tvVideoTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDatePosted"
+        android:text="5 hours ago"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/tvVideoViews"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVideoTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="5dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
